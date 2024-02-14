@@ -11,7 +11,7 @@ public:
 };
 
 int main() {
-    int n, k = 0, m = 0; 
+    int n; 
 
     cin >> n;
     info* a = new info[n];
@@ -30,29 +30,29 @@ int main() {
         if (maxyear < a[i].year) {
             maxyear = a[i].year;
             b[0] = a[i]; 
-            k = 0;       
+                
         }
         else if (maxyear == a[i].year) {
             if (b[0].month < a[i].month || (b[0].month == a[i].month && b[0].day < a[i].day)) {
                 b[0] = a[i]; 
-                k = 0;       
+                    
             }
         }
 
         if (minyear > a[i].year) {
             minyear = a[i].year;
             c[0] = a[i]; 
-            m = 0;       
+                  
         }
         else if (minyear == a[i].year) {
             if (c[0].month > a[i].month || (c[0].month == a[i].month && c[0].day > a[i].day)) {
                 c[0] = a[i]; 
-                m = 0;       
+                     
             }
         }
     }
 
-    cout << b[k].name << endl << c[m].name;
+    cout << b[0].name << endl << c[0].name;
 
     
     delete[] a;
