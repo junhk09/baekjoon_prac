@@ -13,12 +13,12 @@ int main() {
         }
         for (int j = 2 * N - count; j >= 1; j--)
         {
-            printf("*");
+            cout<<"*";
         }
        
         count += 2;
 
-        printf("\n");
+        cout<<"\n";
     }
 
 
